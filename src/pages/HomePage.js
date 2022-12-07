@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import "./HomePage.css"
 
 const HomePage = () => {
@@ -25,7 +26,7 @@ const HomePage = () => {
                         <div className="card-body">
                             <h5 className="card-title">Manage Items</h5>
                             <p className="card-text">Create and edit items and add comments.</p>
-                            <a href="#" className="btn btn-primary">Manage Items</a>
+                            <Link to={'/items/manage'} className="btn btn-primary">Manage Items</Link>
                         </div>
                     </div>
                 </div>

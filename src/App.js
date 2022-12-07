@@ -1,6 +1,7 @@
 import './App.css';
 import { Routes, Route } from 'react-router-dom'
 import HomePage from './pages/HomePage';
+import ManageItemsPage from './pages/ManageItemsPage';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       </nav>
       <Routes>
         <Route path='/' element={ <HomePage /> } />
+        <Route path='/items/manage' element={ <ManageItemsPage /> } />
       </Routes>
     </div>
   );
