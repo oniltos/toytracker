@@ -2,13 +2,11 @@ import { Link } from "react-router-dom"
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 
-const apiURL = 'https://ironrest.cyclic.app/86toys'
-
 const ManageItemsPage = () => {
     const [toys, setToys] = useState([])
 
     useEffect(() => {
-        axios.get(apiURL)
+        axios.get(`${process.env.REACT_APP_API_URL}/86toys`)
             .then(response => {
                 setToys(response.data)
             })
@@ -36,7 +34,7 @@ const ManageItemsPage = () => {
                             {
                                 toys.length && toys.map(toy => {
                                     return (
-                                        <tr>
+                                        <tr key={toy._id}>
                                             <td>{ toy.name }</td>
                                             <td>{ new Date(toy.collectedDate).toLocaleDateString('pt-br') }</td>
                                             <td>
