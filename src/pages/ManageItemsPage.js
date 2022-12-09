@@ -4,6 +4,7 @@ import axios from 'axios'
 
 const ManageItemsPage = () => {
     const [toys, setToys] = useState([])
+    const [refresh, setRefresh] = useState(false)
 
     useEffect(() => {
         axios.get(`${process.env.REACT_APP_API_URL}/86toys`)
@@ -11,7 +12,15 @@ const ManageItemsPage = () => {
                 setToys(response.data)
             })
             .catch(err => console.log(err))
-    }, [])
+    }, [refresh])
+
+    const deleteToy = toyId => {
+        axios.delete(`${process.env.REACT_APP_API_URL}/86toys/${toyId}`)
+            .then(response => {
+                setRefresh(!refresh)
+            })
+            .catch(err => console.log(err))
+    }
 
     return (
         <div className="ManageItemsPage">
@@ -38,8 +47,8 @@ const ManageItemsPage = () => {
                                             <td>{ toy.name }</td>
                                             <td>{ new Date(toy.collectedDate).toLocaleDateString('pt-br') }</td>
                                             <td>
-                                                <Link className='btn btn-primary' to='#'>view</Link><Link className='btn btn-primary' to={`/items/${toy._id}`}>edit</Link>
-                                                <button className="btn btn-danger">delete</button>
+                                                <Link className='btn btn-primary' to={`/items/${toy._id}`}>view</Link><Link className='btn btn-primary' to={`/items/${toy._id}/edit`}>edit</Link>
+                                                <button className="btn btn-danger" onClick={() => deleteToy(toy._id)}>delete</button>
                                             </td>
                                         </tr>
                                     )

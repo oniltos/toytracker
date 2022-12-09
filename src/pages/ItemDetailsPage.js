@@ -1,6 +1,7 @@
 import { Link, useParams } from "react-router-dom"
 import { useState, useEffect } from 'react'
 import axios from 'axios'
+import Comments from "../components/Comments"
 
 const ItemDetailsPage = () => {
     const { itemId } = useParams()
@@ -41,6 +42,7 @@ const ItemDetailsPage = () => {
                     )
                 }
             </div>
+            { toy && <Comments toyId={toy._id} />}
         </div>
     )
 }
