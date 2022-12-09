@@ -47,7 +47,7 @@ const ManageItemsPage = () => {
                                             <td>{ toy.name }</td>
                                             <td>{ new Date(toy.collectedDate).toLocaleDateString('pt-br') }</td>
                                             <td>
-                                                <Link className='btn btn-primary' to='#'>view</Link><Link className='btn btn-primary' to={`/items/${toy._id}`}>edit</Link>
+                                                <Link className='btn btn-primary' to={`/items/${toy._id}`}>view</Link><Link className='btn btn-primary' to={`/items/${toy._id}/edit`}>edit</Link>
                                                 <button className="btn btn-danger" onClick={() => deleteToy(toy._id)}>delete</button>
                                             </td>
                                         </tr>
