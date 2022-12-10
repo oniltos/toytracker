@@ -1,0 +1,6 @@
+.Comments .comment {
+    border: solid 1px #ccc;
+    margin-bottom: 1em;
+    padding: .8em;
+    width: 65%;
+}

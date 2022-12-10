@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 import ToyCard from '../components/ToyCard'
+import PageTitle from '../components/PageTitle'
 
 const ViewCollectionPage = () => {
     const [toys, setToys] = useState([])
@@ -18,7 +19,7 @@ const ViewCollectionPage = () => {
         <div className="ViewCollectionPage">
             <div className="row">
                 <div className="col">
-                    <h1>This collection has { toys.length } items</h1>
+                    <PageTitle>This collection has { toys.length } items</PageTitle>
                 </div>
             </div>
             <div className="row">

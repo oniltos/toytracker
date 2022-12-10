@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 import Swal from 'sweetalert2'
+import './Comments.css'
 
 const Comments = ({toyId}) => {
     const [text, setText] = useState('')
@@ -43,7 +44,7 @@ const Comments = ({toyId}) => {
     }
 
     return (
-        <div className="row">
+        <div className="row Comments">
             <div className="col">
                 <h2>Comments</h2>
 
@@ -69,7 +70,7 @@ const Comments = ({toyId}) => {
                                 {
                                     comments.map(comment => {
                                         return (
-                                            <div key={comment._id}>
+                                            <div className='comment' key={comment._id}>
                                                 <p>{comment.text}</p>
                                                 <p>{ comment.createdAt }</p>
                                             </div>

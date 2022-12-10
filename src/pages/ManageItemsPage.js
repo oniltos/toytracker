@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom"
 import { useState, useEffect } from 'react'
 import axios from 'axios'
+import PageTitle from "../components/PageTitle"
 
 const ManageItemsPage = () => {
     const [toys, setToys] = useState([])
@@ -26,12 +27,12 @@ const ManageItemsPage = () => {
         <div className="ManageItemsPage">
             <div className="row">
                 <div className="col">
-                    <h1>ToyTracker - Manage Items</h1>
+                    <PageTitle>ToyTracker - Manage Items</PageTitle>
                 </div>
             </div>
             <div className="row">
                 <div className="col">
-                    <table className="table">
+                    <table className="table table-striped">
                         <thead>
                             <tr>
                                 <th>Name</th>
@@ -47,7 +48,8 @@ const ManageItemsPage = () => {
                                             <td>{ toy.name }</td>
                                             <td>{ new Date(toy.collectedDate).toLocaleDateString('pt-br') }</td>
                                             <td>
-                                                <Link className='btn btn-primary' to={`/items/${toy._id}`}>view</Link><Link className='btn btn-primary' to={`/items/${toy._id}/edit`}>edit</Link>
+                                                <Link className='btn btn-primary me-2' to={`/items/${toy._id}`}>view</Link>
+                                                <Link className='btn btn-primary me-2' to={`/items/${toy._id}/edit`}>edit</Link>
                                                 <button className="btn btn-danger" onClick={() => deleteToy(toy._id)}>delete</button>
                                             </td>
                                         </tr>
