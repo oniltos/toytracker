@@ -16,7 +16,7 @@ const HomePage = () => {
                         <div className="card-body">
                             <h5 className="card-title">View Collection</h5>
                             <p className="card-text">View the action figures collection listed as a grid.</p>
-                            <a href="#" className="btn btn-primary">View Collection</a>
+                            <Link to='view-collection' className="btn btn-primary">View Collection</Link>
                         </div>
                     </div>
                 </div>

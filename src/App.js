@@ -6,6 +6,7 @@ import CreateItemPage from './pages/CreateItemPage';
 import Navbar from './components/Navbar';
 import ItemDetailsPage from './pages/ItemDetailsPage';
 import EditItemPage from './pages/EditItemPage';
+import ViewCollectionPage from './pages/ViewCollectionPage';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path='/items/create' element={ <CreateItemPage /> } />
         <Route path='/items/:itemId' element={ <ItemDetailsPage /> } />
         <Route path='/items/:itemId/edit' element={ <EditItemPage />} />
+        <Route path='/view-collection' element={ <ViewCollectionPage /> } />
       </Routes>
     </div>
   );
