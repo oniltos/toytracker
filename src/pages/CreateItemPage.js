@@ -66,7 +66,7 @@ const CreateItemPage = () => {
                         <div className="mb-3">
                             <label htmlFor="collectedDate" className="form-label">Collected At</label>
                             <input 
-                                type="text" 
+                                type="datetime-local" 
                                 className="form-control" 
                                 id="collectedDate" 
                                 value={collectedDate}
@@ -76,7 +76,7 @@ const CreateItemPage = () => {
                         <div className="mb-3">
                             <label htmlFor="manufacturingDate" className="form-label">Manufactured At</label>
                             <input 
-                                type="text" 
+                                type="date" 
                                 className="form-control" 
                                 id="manufacturingDate" 
                                 value={manufacturingDate}

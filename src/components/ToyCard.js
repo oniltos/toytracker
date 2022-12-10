@@ -3,7 +3,7 @@ import './ToyCard.css'
 
 const ToyCard = ({toy}) => {
     return (
-        <div className="col ToyCard">
+        <div className="col ToyCard mb-4">
             <div className="card">
                 <Link to={`/items/${toy._id}`} >
                     <img src={toy.imageUrl} className="card-img-top" alt="..." />
