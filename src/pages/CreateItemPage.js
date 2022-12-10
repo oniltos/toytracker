@@ -1,6 +1,7 @@
 import { Link, useNavigate } from "react-router-dom"
 import { useState } from 'react'
 import axios from 'axios'
+import PageTitle from "../components/PageTitle"
 
 const CreateItemPage = () => {
     const [name, setName] = useState('')
@@ -33,7 +34,7 @@ const CreateItemPage = () => {
         <div className="CreateItemPage">
             <div className="row">
                 <div className="col">
-                    <h1>ToyTracker - Create Item</h1>
+                    <PageTitle>ToyTracker - Create Item</PageTitle>
                 </div>
             </div>
             <div className="row">

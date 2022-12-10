@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import PageTitle from '../components/PageTitle'
 import "./HomePage.css"
 
 const HomePage = () => {
@@ -6,7 +7,7 @@ const HomePage = () => {
         <div className="HomePage">
             <div className="row">
                 <div className="col">
-                    <h1>ToyTracker</h1>
+                    <PageTitle>ToyTracker</PageTitle>
                 </div>
             </div>
             <div className="row">

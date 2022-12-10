@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom"
+import './ToyCard.css'
 
 const ToyCard = ({toy}) => {
     return (
-        <div className="col">
-            <div className="card" style={{width: '18rem'}}>
+        <div className="col ToyCard">
+            <div className="card">
                 <Link to={`/items/${toy._id}`} >
                     <img src={toy.imageUrl} className="card-img-top" alt="..." />
                 </Link>

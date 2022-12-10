@@ -2,6 +2,7 @@ import { Link, useParams } from "react-router-dom"
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 import Comments from "../components/Comments"
+import PageTitle from "../components/PageTitle"
 
 const ItemDetailsPage = () => {
     const { itemId } = useParams()
@@ -20,7 +21,7 @@ const ItemDetailsPage = () => {
         <div className="ItemDetailsPage">
             <div className="row">
                 <div className="col">
-                    <h1>ToyTracker - Item Details</h1>
+                    <PageTitle>ToyTracker - Item Details</PageTitle>
                 </div>
             </div>
             <div className="row">

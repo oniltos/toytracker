@@ -2,6 +2,7 @@ import { Link, useNavigate, useParams } from "react-router-dom"
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 import Swal from 'sweetalert2'
+import PageTitle from "../components/PageTitle"
 
 const EditItemPage = () => {
     const [name, setName] = useState('')
@@ -59,7 +60,7 @@ const EditItemPage = () => {
         <div className="EditItemPage">
             <div className="row">
                 <div className="col">
-                    <h1>ToyTracker - Edit Item</h1>
+                    <PageTitle>ToyTracker - Edit Item</PageTitle>
                 </div>
             </div>
             <div className="row">
