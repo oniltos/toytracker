@@ -19,7 +19,7 @@ const EditItemPage = () => {
     const convertDate = str => new Date(str).toISOString().split('T')[0]
 
     useEffect(() => {
-        axios.get(`${process.env.REACT_APP_API_URL}/86toys/${itemId}`)
+        axios.get(`${process.env.REACT_APP_API_URL}/toys/${itemId}`)
             .then(response => {
                 let { 
                     name, 
@@ -48,7 +48,7 @@ const EditItemPage = () => {
             value
         }
 
-        axios.put(`${process.env.REACT_APP_API_URL}/86toys/${itemId}`, updatedToy)
+        axios.put(`${process.env.REACT_APP_API_URL}/toys/${itemId}`, updatedToy)
             .then(response => {
                 Swal.fire({
                     title: 'Success!',

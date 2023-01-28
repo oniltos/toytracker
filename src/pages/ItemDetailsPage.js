@@ -10,7 +10,7 @@ const ItemDetailsPage = () => {
     const [toy, setToy] = useState(null)
 
     useEffect(() => {
-        axios.get(`${process.env.REACT_APP_API_URL}/86toys/${itemId}`)
+        axios.get(`${process.env.REACT_APP_API_URL}/toys/${itemId}`)
             .then(response => {
                 setToy(response.data)
             })

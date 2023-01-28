@@ -8,7 +8,7 @@ const ViewCollectionPage = () => {
     const [toys, setToys] = useState([])
 
     useEffect(() => {
-        axios.get(`${process.env.REACT_APP_API_URL}/86toys`)
+        axios.get(`${process.env.REACT_APP_API_URL}/toys`)
             .then(response => {
                 setToys(response.data)
             })

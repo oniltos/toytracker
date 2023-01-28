@@ -23,7 +23,7 @@ const CreateItemPage = () => {
             value
         }
 
-        axios.post(`${process.env.REACT_APP_API_URL}/86toys`, newToy)
+        axios.post(`${process.env.REACT_APP_API_URL}/toys`, newToy)
             .then(response => {
                 navigate('/items/manage')
             })

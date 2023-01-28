@@ -8,7 +8,7 @@ const ManageItemsPage = () => {
     const [refresh, setRefresh] = useState(false)
 
     useEffect(() => {
-        axios.get(`${process.env.REACT_APP_API_URL}/86toys`)
+        axios.get(`${process.env.REACT_APP_API_URL}/toys`)
             .then(response => {
                 setToys(response.data)
             })
@@ -16,7 +16,7 @@ const ManageItemsPage = () => {
     }, [refresh])
 
     const deleteToy = toyId => {
-        axios.delete(`${process.env.REACT_APP_API_URL}/86toys/${toyId}`)
+        axios.delete(`${process.env.REACT_APP_API_URL}/toys/${toyId}`)
             .then(response => {
                 setRefresh(!refresh)
             })
